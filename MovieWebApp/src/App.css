@@ -23,11 +23,11 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif; /* Thay $font-family */
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  background-color: black; /* Thay $body-bg */
-  color: white; /* Thay $txt-color */
+  background-color: black;
+  color: white;
 }
 
 @media (max-width: 480px) {
@@ -43,7 +43,7 @@ a {
 
 @media (hover: hover) {
   a:hover {
-    color: #ff0000; /* Thay $main-color */
+    color: #ff0000;
   }
 }
 

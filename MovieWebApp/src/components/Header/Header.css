@@ -29,8 +29,8 @@
 }
 
 .header.shrink {
-  height: 45px; /* Thay $header-shrink-height bằng giá trị cụ thể */
-  background-color: #f8f9fa; /* Thay $body-bg bằng màu cụ thể */
+  height: 80px;
+  background-color: black;
 }
 
 .header__wrap {
