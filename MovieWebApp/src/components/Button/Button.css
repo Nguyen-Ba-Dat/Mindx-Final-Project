@@ -1,6 +1,6 @@
 button {
   cursor: pointer;
-  font-family: Arial, sans-serif; /* Thay $font-family bằng font mong muốn */
+  font-family: Arial, sans-serif; 
 }
 
 .btn {
@@ -21,17 +21,17 @@ button {
 }
 
 .btn-outline {
-  border: 3px solid #ffffff; /* Thay $white bằng màu mong muốn */
+  border: 3px solid #ffffff; 
   background-color: transparent;
-  color: #ffffff; /* Thay $white bằng màu mong muốn */
+  color: #ffffff; 
   box-shadow: unset;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .btn-outline:hover {
   box-shadow: unset;
-  color: #ff0000; /* Thay $main-color bằng màu mong muốn */
-  background-color: #ffffff; /* Thay $white bằng màu mong muốn */
+  color: #ff0000; 
+  background-color: #ffffff;
 }
 
 .btn.small {
