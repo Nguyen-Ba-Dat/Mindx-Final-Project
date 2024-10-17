@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer.scss';
+import './Footer.css';
 import bg from '../../assets/footer-bg.jpg';
 import logo from '../../assets/tmovie.png';
 import { Link } from 'react-router-dom';

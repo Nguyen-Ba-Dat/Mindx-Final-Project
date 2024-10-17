@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 
-import './movie-list.scss';
+import './MovieList.css';
 import { SwiperSlide, Swiper} from 'swiper/react';
 
-// import { Link } from 'react-router-dom';
-// import Button from '../button/Button';
+import { Link } from 'react-router-dom';
+import Button from '../button/Button';
 import tmdbApi, {category} from '../../api/tmdbApi';
-// import apiConfig from '../../api/apiConfig';
+import apiConfig from '../../api/apiConfig';
 import MovieCard from '../movie-card/MovieCard';
 
 const MovieList = props => {
@@ -44,7 +44,6 @@ const MovieList = props => {
             grabCursor={true}
             spaceBetween={10}
             slidesPerView={'auto'}>
-
                 {
                     items.map((item, i) => (
                         <SwiperSlide>

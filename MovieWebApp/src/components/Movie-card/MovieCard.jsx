@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './movie-card.scss';
+import './MovieCard.css';
 
 import Button from '../button/Button';
 import {category} from '../../api/tmdbApi';

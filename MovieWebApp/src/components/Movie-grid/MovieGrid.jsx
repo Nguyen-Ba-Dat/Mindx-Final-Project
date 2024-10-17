@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useHistory, useParams } from 'react-router';
 import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi';
-import './movie-grid.scss';
+import './MovieGrid.css';
 import MovieCard from '../movie-card/MovieCard';
 import Button, { OutlineButton } from '../button/Button';
 import Input from '../input/Input';
