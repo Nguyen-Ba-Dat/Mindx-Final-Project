@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 160%;
-  border-radius: 4px; /* Thay $border-radius với giá trị phù hợp */
+  border-radius: 30px;
   margin-bottom: 1rem;
 }
 
@@ -23,10 +23,10 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #000000; /* Thay $black với giá trị phù hợp */
+  background-color: #000000;
   opacity: 0;
   transition: opacity 0.3s ease;
-  border-radius: 4px; /* Thay $border-radius với giá trị phù hợp */
+  border-radius: 30px;
 }
 
 @media (hover: hover) and (pointer: fine) {

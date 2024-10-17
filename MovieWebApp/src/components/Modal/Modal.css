@@ -9,7 +9,7 @@
   right: 0;
   bottom: 0;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); /* Thay $black và $alpha */
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
 }
@@ -21,7 +21,7 @@
 
 .modal__content {
   padding: 2rem;
-  background-color: #f8f9fa; /* Thay $body-bg */
+  background-color: black;
   width: 50%;
   opacity: 0;
   transform: translateY(-250px);
@@ -44,7 +44,7 @@
 }
 
 .modal__content__close:hover {
-  color: #ff0000; /* Thay $main-color */
+  color: #ff0000;
 }
 
 .modal.active .modal__content {

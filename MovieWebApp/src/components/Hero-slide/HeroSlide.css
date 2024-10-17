@@ -28,11 +28,7 @@
   left: 0;
   width: 100%;
   height: 100px;
-  background-image: linear-gradient(
-    to top,
-    #f8f9fa,
-    rgba(0, 0, 0, 0)
-  ); /* Thay $body-bg với màu phù hợp */
+  background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0))
 }
 
 .hero-slide__item__content {
@@ -96,8 +92,8 @@
 
 .hero-slide__item__content__poster img {
   width: 400px;
-  border-radius: 10px; /* Thay $border-radius với giá trị phù hợp */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thay $box-shadow với giá trị phù hợp */
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
   transform: scale(0);
   transition: transform 0.7s ease;
 }

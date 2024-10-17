@@ -5,9 +5,9 @@ button {
 
 .btn {
   border: 4px solid transparent;
-  background-color: #ff0000; /* Thay $main-color bằng màu mong muốn */
-  color: #ffffff; /* Thay $white bằng màu mong muốn */
-  border-radius: 4px; /* Thay $border-radius bằng giá trị mong muốn */
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 30px;
   padding: 0.5rem 1.8rem;
   font-size: 1.5rem;
   font-weight: 600;
