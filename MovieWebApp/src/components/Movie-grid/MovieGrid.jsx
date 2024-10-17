@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useHistory, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi';
 import './MovieGrid.css';
 import MovieCard from '../movie-card/MovieCard';
@@ -85,7 +85,7 @@ const MovieGrid = props => {
 
 const MovieSearch = props => {
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const [keyword, setKeyword] = useState(props.keyword ? props.keyword : '');
 

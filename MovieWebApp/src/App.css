@@ -26,8 +26,8 @@ body {
   font-family: "Montserrat", sans-serif; /* Thay $font-family */
   font-weight: 400;
   line-height: 1.5;
-  background-color: #f8f9fa; /* Thay $body-bg */
-  color: #333333; /* Thay $txt-color */
+  background-color: black; /* Thay $body-bg */
+  color: white; /* Thay $txt-color */
 }
 
 @media (max-width: 480px) {
