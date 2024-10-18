@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { OutlineButton } from '../components/button/Button';
-import HeroSlide from '../components/hero-slide/HeroSlide';
-import MovieList from '../components/movie-list/MovieList';
+import { OutlineButton } from '../components/Button/Button';
+import HeroSlide from '../components/Hero-slide/HeroSlide';
+import MovieList from '../components/Movie-list/MovieList';
 import { category, movieType, tvType } from '../api/tmdbApi';
 
 export default function Home() {

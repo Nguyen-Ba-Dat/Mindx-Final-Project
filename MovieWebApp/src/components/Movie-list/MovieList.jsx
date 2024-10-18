@@ -2,11 +2,8 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './MovieList.css';
 import { SwiperSlide, Swiper } from 'swiper/react';
-import { Link } from 'react-router-dom';
-import Button from '../button/Button';
 import tmdbApi, { category } from '../../api/tmdbApi';
-import apiConfig from '../../api/apiConfig';
-import MovieCard from '../movie-card/MovieCard';
+import MovieCard from '../Movie-card/MovieCard';
 
 const MovieList = props => {
     const [items, setItems] = useState([]);

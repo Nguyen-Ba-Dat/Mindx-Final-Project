@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './MovieCard.css';
-import Button from '../button/Button';
+import Button from '../Button/Button';
 import { category } from '../../api/tmdbApi';
 import apiConfig from '../../api/apiConfig';
 import { Link } from 'react-router-dom';
