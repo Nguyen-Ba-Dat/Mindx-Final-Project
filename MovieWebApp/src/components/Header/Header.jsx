@@ -16,10 +16,10 @@ const headerNav = [
         display: 'TV Series',
         path: '/tv'
     },
-    // {
-    //     display: 'SignIn',
-    //     path: '/sign in'
-    // }
+    {
+        display: 'Log In',
+        path: '/signin'
+    }
 ];
 
 const Header = () => {
@@ -96,7 +96,7 @@ const Header = () => {
                             </>
                         ) : (
                             <li className="header__signin">
-                                <Link to="/signin">Sign In</Link>
+                                {/* <Link to="/signin">Sign In</Link> */}
                             </li>
                         )
                     }

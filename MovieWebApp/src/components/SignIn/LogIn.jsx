@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Auth.css';
-const SignIn = () => {
+const LogIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleSignIn = (e) => {
+    const handleLogIn = (e) => {
         e.preventDefault();
         
         const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -17,16 +17,16 @@ const SignIn = () => {
             localStorage.setItem('loggedInUser', JSON.stringify(storedUser));
             
             alert("Login successful! Welcome back.");
-            navigate('/');  // Redirect to home page after sign in
+            navigate('/');  // Redirect to home page after Log in
         } else {
             alert("Invalid credentials, please try again.");
         }
     };
 
     return (
-        <div className="signin-container">
-            <h2>Sign In</h2>
-            <form onSubmit={handleSignIn}>
+        <div className="Login-container">
+            <h2>Log In</h2>
+            <form onSubmit={handleLogIn}>
                 <div className="input-group">
                     <label>Email</label>
                     <input 
@@ -45,11 +45,11 @@ const SignIn = () => {
                         required 
                     />
                 </div>
-                <button type="submit">Sign In</button>
+                <button type="submit">Log In</button>
             </form>
             <p>Don't have an account? <a href="/signup">Sign Up</a></p>
         </div>
     );
 };
 
-export default SignIn;
+export default LogIn;

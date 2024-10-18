@@ -4,7 +4,7 @@ import { Routes as RouterRoutes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Catalog from '../pages/Catalog';
 import Detail from '../pages/detail/Detail';
-import SignIn from '../components/SignIn/SignIn';  
+import LogIn from '../components/SignIn/LogIn';  
 import SignUp from '../components/SignIn/SignUp';  
 
 /**
@@ -30,9 +30,9 @@ export default function AppRoutes() {
                 path='/'
                 element={<Home />} 
             />
-                        <Route
+            <Route
                 path='/signin'
-                element={<SignIn />} 
+                element={<LogIn />} 
             />
             <Route
                 path='/signup'
