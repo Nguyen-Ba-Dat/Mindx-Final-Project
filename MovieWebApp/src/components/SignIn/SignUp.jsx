@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Auth.css';
+import './Signin.css';
 const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const navigate = useNavigate();  // Use useNavigate
+    const navigate = useNavigate();  
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -14,17 +14,16 @@ const SignUp = () => {
             return;
         }
         
-        // Logic to add the user (e.g., save user in localStorage)
         const newUser = { email, password };
-        localStorage.setItem('user', JSON.stringify(newUser));  // Save user info to localStorage
+        localStorage.setItem('user', JSON.stringify(newUser));  
 
         console.log('Signed up with', email);
-        alert("Sign Up successful! Please login now.");  // Show success message
-        navigate('/signin');  // Redirect to SignIn page after sign up
+        alert("Sign Up successful! Please login now."); 
+        navigate('/signin');  
     };
 
     return (
-        <div className="signup-container">
+        <div className="Login-container">
             <h2>Sign Up</h2>
             <form onSubmit={handleSignUp}>
                 <div className="input-group">

@@ -1,0 +1,122 @@
+.Login-container {
+  width: 350px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.7); /* Tạo hiệu ứng trong suốt */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: white; /* Đổi màu chữ thành trắng */
+}
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 60px; /* Thêm khoảng trống cho icon */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent;
+  color: white; /* Đổi màu chữ input */
+  border: 1px solid white;
+}
+
+.input-group i {
+  position: absolute;
+  left: 5px;
+  top: 70%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+  background-color: #f0f0f0;
+}
+
+p {
+  font-size: 14px;
+  color: white;
+}
+
+p a {
+  color: #00ff00;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.or-divider {
+  margin: 20px 0;
+  font-size: 14px;
+  color: white;
+  position: relative;
+}
+
+.or-divider:before,
+.or-divider:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.or-divider:before {
+  left: 0;
+}
+
+.or-divider:after {
+  right: 0;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-buttons img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.social-buttons img:hover {
+  opacity: 0.8;
+}

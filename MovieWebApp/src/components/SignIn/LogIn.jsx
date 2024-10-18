@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Auth.css';
+import './Signin.css';
 const LogIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -24,31 +24,45 @@ const LogIn = () => {
     };
 
     return (
-        <div className="Login-container">
-            <h2>Log In</h2>
-            <form onSubmit={handleLogIn}>
-                <div className="input-group">
-                    <label>Email</label>
-                    <input 
-                        type="email" 
-                        value={email} 
-                        onChange={(e) => setEmail(e.target.value)} 
-                        required 
-                    />
-                </div>
-                <div className="input-group">
-                    <label>Password</label>
-                    <input 
-                        type="password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        required 
-                    />
-                </div>
-                <button type="submit">Log In</button>
-            </form>
-            <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+<div className="Login-container">
+    <h2>Login Now</h2>
+    <form onSubmit={handleLogIn}>
+        <div className="input-group">
+            <label>Username</label>
+            <i className="bx bx-user"></i> {/* Biểu tượng người dùng từ Boxicons */}
+            <input 
+                type="email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+                required 
+            />
         </div>
+        <div className="input-group">
+            <label>Password</label>
+            <i className="bx bx-lock"></i> {/* Biểu tượng khóa từ Boxicons */}
+            <input 
+                type="password" 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)} 
+                required 
+            />
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Forgot Password?<a href="/forgot-password">Click here</a></p>
+    <p>New User? <a href="/signup">Register here</a></p>
+
+    <div className="or-divider">Or Login with</div>
+
+    <div className="social-buttons">
+        <i className="bx bxl-facebook-square"></i> 
+        <i className="bx bxl-twitter"></i>         
+        <i className="bx bxl-pinterest"></i>       
+        <i className="bx bxl-linkedin-square"></i> 
+    </div>
+</div>
+
     );
 };
 
