@@ -4,7 +4,7 @@ import './App.css';
 
 import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header/Header'
-import Footer from './components/footer/Footer';
+import Footer from './components/Footer/Footer';
 import AppRoutes from './config/Routes';
 
 function App() {
