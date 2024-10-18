@@ -29,7 +29,7 @@ const LogIn = () => {
     <form onSubmit={handleLogIn}>
         <div className="input-group">
             <label>Username</label>
-            <i className="bx bx-user"></i> {/* Biểu tượng người dùng từ Boxicons */}
+            <i className="bx bx-user"></i> 
             <input 
                 type="email" 
                 value={email} 
@@ -39,7 +39,7 @@ const LogIn = () => {
         </div>
         <div className="input-group">
             <label>Password</label>
-            <i className="bx bx-lock"></i> {/* Biểu tượng khóa từ Boxicons */}
+            <i className="bx bx-lock"></i>
             <input 
                 type="password" 
                 value={password} 

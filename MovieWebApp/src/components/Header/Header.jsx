@@ -16,10 +16,6 @@ const headerNav = [
         display: 'TV Series',
         path: '/tv'
     },
-    {
-        display: 'Log In',
-        path: '/signin'
-    }
 ];
 
 const Header = () => {
@@ -72,7 +68,7 @@ const Header = () => {
             <div className="header__wrap container">
                 <div className="logo">
                     <img src={logo} alt="" />
-                    <Link to="/">XemPhim</Link>
+                    <Link to="/">PhimGi</Link>
                 </div>
                 <ul className="header__nav">
                     {
@@ -96,7 +92,7 @@ const Header = () => {
                             </>
                         ) : (
                             <li className="header__signin">
-                                {/* <Link to="/signin">Sign In</Link> */}
+                                <Link to="/signin">Log In</Link>
                             </li>
                         )
                     }
