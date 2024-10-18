@@ -1,0 +1,45 @@
+.favorites {
+  padding: 2rem;
+  padding-top: 100px;
+}
+
+.favorite-movies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.favorite-movie-card {
+  position: relative;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 160%; /* Tương tự MovieCard */
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.favorite-movie-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.favorite-movie-card:hover::before {
+  opacity: 0.8;
+}
+
+.favorite-movie-card h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  margin: 0;
+  z-index: 1;
+}

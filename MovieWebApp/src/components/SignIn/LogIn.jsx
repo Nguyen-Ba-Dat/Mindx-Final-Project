@@ -17,7 +17,7 @@ const LogIn = () => {
             localStorage.setItem('loggedInUser', JSON.stringify(storedUser));
             
             alert("Login successful! Welcome back.");
-            navigate('/');  // Redirect to home page after Log in
+            navigate('/');  
         } else {
             alert("Invalid credentials, please try again.");
         }

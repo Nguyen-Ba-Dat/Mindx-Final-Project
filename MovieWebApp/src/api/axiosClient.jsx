@@ -12,7 +12,6 @@ const axiosClient = axios.create({
  * Định nghĩa request
  */
 axiosClient.interceptors.request.use(async (config) => {
-    // Nếu có params, hãy xây dựng chuỗi truy vấn
     if (config.params) {
         const params = new URLSearchParams(config.params);
         params.append('api_key', apiConfig.apiKey);

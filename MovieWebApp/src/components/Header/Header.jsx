@@ -81,13 +81,20 @@ const Header = () => {
                         ))
                     }
                     {
+                        isAuthenticated && (
+                            <li>
+                                <Link to="/favorites">Favorite</Link> {/* Route Favorite */}
+                            </li>
+                        )
+                    }
+                    {
                         isAuthenticated ? (
                             <>
                                 <li className="header__user-info">
                                     <span>Xin chào, {userName}</span>
                                 </li>
                                 <li>
-                                    <button onClick={handleLogout}>Logout</button>
+                                    <button className='logout-button' onClick={handleLogout}>Log out</button>
                                 </li>
                             </>
                         ) : (
