@@ -10,6 +10,7 @@ const MovieCard = props => {
     const [isFavorite, setIsFavorite] = useState(false);
     const link = '/' + category[props.category] + '/' + item.id;
     const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path);
+    const isAuthenticated = props.isAuthenticated; // Nhận prop từ component cha
 
     useEffect(() => {
         const favoriteMovies = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -39,9 +40,11 @@ const MovieCard = props => {
                 </div>
                 <h3>{item.title || item.name}</h3>
             </Link>
-            <div className="favorite-icon" onClick={toggleFavorite}>
-                <i className={`bx ${isFavorite ? 'bxs-star' : 'bx-star'}`}></i>
-            </div>
+            {isAuthenticated && ( // Chỉ hiển thị ngôi sao nếu người dùng đã đăng nhập
+                <div className="favorite-icon" onClick={toggleFavorite}>
+                    <i className={`bx ${isFavorite ? 'bxs-star' : 'bx-star'}`}></i>
+                </div>
+            )}
         </div>
     );
 }

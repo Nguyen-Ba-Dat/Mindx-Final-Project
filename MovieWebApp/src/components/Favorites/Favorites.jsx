@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import MovieCard from '../Movie-card/MovieCard';
-import './Favorites.css'
+import './Favorites.css';
 
 const Favorites = () => {
     const [favoriteMovies, setFavoriteMovies] = useState([]);
+    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'; // Kiểm tra trạng thái đăng nhập
 
     useEffect(() => {
         const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -16,7 +17,12 @@ const Favorites = () => {
             <div className="favorite-movies-list">
                 {favoriteMovies.length > 0 ? (
                     favoriteMovies.map((movie, index) => (
-                        <MovieCard key={index} item={movie} category="movie" />
+                        <MovieCard 
+                            key={index} 
+                            item={movie} 
+                            category="movie" 
+                            isAuthenticated={isAuthenticated} // Truyền trạng thái đăng nhập
+                        />
                     ))
                 ) : (
                     <p>No favorite movies yet.</p>
