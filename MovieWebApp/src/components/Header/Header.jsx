@@ -1,9 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-
-import { Link, useLocation } from 'react-router-dom';
-
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
-
 import logo from '../../assets/tmovie.png';
 
 const headerNav = [
@@ -19,16 +16,19 @@ const headerNav = [
         display: 'TV Series',
         path: '/tv'
     },
-    {
-        display: 'SignIn',
-        path: '/'
-    }
+    // {
+    //     display: 'SignIn',
+    //     path: '/sign in'
+    // }
 ];
 
 const Header = () => {
 
     const { pathname } = useLocation();
     const headerRef = useRef(null);
+    const navigate = useNavigate();
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [userName, setUserName] = useState('');
 
     const active = headerNav.findIndex(e => e.path === pathname);
 
@@ -49,6 +49,24 @@ const Header = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // Kiểm tra trạng thái đăng nhập
+        const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+        if (isAuthenticated) {
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            setIsAuthenticated(true);
+            setUserName(user?.email);  
+        }
+    }, [pathname]);
+
+    const handleLogout = () => {
+        localStorage.removeItem('isAuthenticated');
+        localStorage.removeItem('loggedInUser');
+        setIsAuthenticated(false);
+        setUserName('');
+        navigate('/signin');  
+    };
+
     return (
         <div ref={headerRef} className="header">
             <div className="header__wrap container">
@@ -65,6 +83,22 @@ const Header = () => {
                                 </Link>
                             </li>
                         ))
+                    }
+                    {
+                        isAuthenticated ? (
+                            <>
+                                <li className="header__user-info">
+                                    <span>Xin chào, {userName}</span>
+                                </li>
+                                <li>
+                                    <button onClick={handleLogout}>Logout</button>
+                                </li>
+                            </>
+                        ) : (
+                            <li className="header__signin">
+                                <Link to="/signin">Sign In</Link>
+                            </li>
+                        )
                     }
                 </ul>
             </div>

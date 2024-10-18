@@ -1,11 +1,10 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'; // Thay đổi từ 'react-dom' sang 'react-dom/client'
+import { createRoot } from 'react-dom/client'; 
 import App from './App';
 
-const container = document.getElementById('root'); // Tìm phần tử DOM có id là 'root'
-const root = createRoot(container); // Tạo root mới
+const container = document.getElementById('root'); 
+const root = createRoot(container); 
 
-// Sử dụng root.render() để render ứng dụng
 root.render(
   <React.StrictMode>
     <App />
