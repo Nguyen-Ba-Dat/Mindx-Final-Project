@@ -4,7 +4,7 @@ import './Favorites.css';
 
 const Favorites = () => {
     const [favoriteMovies, setFavoriteMovies] = useState([]);
-    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'; // Kiểm tra trạng thái đăng nhập
+    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'; 
 
     useEffect(() => {
         const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -21,7 +21,7 @@ const Favorites = () => {
                             key={index} 
                             item={movie} 
                             category="movie" 
-                            isAuthenticated={isAuthenticated} // Truyền trạng thái đăng nhập
+                            isAuthenticated={isAuthenticated} 
                         />
                     ))
                 ) : (

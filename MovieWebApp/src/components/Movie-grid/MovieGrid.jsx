@@ -11,7 +11,7 @@ const MovieGrid = props => {
     const [page, setPage] = useState(1);
     const [totalPage, setTotalPage] = useState(0);
     const { keyword } = useParams();
-    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'; // Kiểm tra xem người dùng đã đăng nhập hay chưa
+    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'; 
 
     useEffect(() => {
         const getList = async () => {

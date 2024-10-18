@@ -10,7 +10,7 @@ import MovieCard from '../movie-card/MovieCard';
 
 const MovieList = props => {
     const [items, setItems] = useState([]);
-    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'; // Kiểm tra xem người dùng đã đăng nhập hay chưa
+    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'; 
 
     /**
      * Lấy danh sách phim
@@ -45,7 +45,7 @@ const MovieList = props => {
                 {
                     items.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <MovieCard item={item} category={props.category} isAuthenticated={isAuthenticated} /> {/* Truyền isAuthenticated */}
+                            <MovieCard item={item} category={props.category} isAuthenticated={isAuthenticated} /> 
                         </SwiperSlide>
                     ))
                 }

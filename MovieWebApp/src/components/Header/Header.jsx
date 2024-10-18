@@ -83,7 +83,7 @@ const Header = () => {
                     {
                         isAuthenticated && (
                             <li>
-                                <Link to="/favorites">Favorite</Link> {/* Route Favorite */}
+                                <Link to="/favorites">Favorite</Link> 
                             </li>
                         )
                     }

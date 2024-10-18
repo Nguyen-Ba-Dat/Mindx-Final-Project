@@ -8,9 +8,6 @@ const axiosClient = axios.create({
     }
 });
 
-/**
- * Định nghĩa request
- */
 axiosClient.interceptors.request.use(async (config) => {
     if (config.params) {
         const params = new URLSearchParams(config.params);
@@ -20,9 +17,6 @@ axiosClient.interceptors.request.use(async (config) => {
     return config;
 });
 
-/**
- * Định nghĩa response
- */
 axiosClient.interceptors.response.use((response) => {
     if (response && response.data) {
         return response.data;
