@@ -19,7 +19,7 @@
 }
 
 .header {
-  height: 60px; /* Thay $header-height bằng giá trị cụ thể */
+  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
@@ -74,7 +74,7 @@
   width: 0;
   transition: width 0.5s ease;
   height: 2px;
-  background-color: #ff0000; /* Thay $main-color bằng màu cụ thể */
+  background-color: #ff0000; 
 }
 
 .header__nav li.active::after,
@@ -89,9 +89,9 @@
     left: 0;
     height: 5rem;
     width: 100%;
-    background-color: #f8f9fa; /* Thay $body-bg bằng màu cụ thể */
+    background-color: #f8f9fa;
     padding: 0 2rem;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Thay $box-shadow bằng giá trị cụ thể */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     justify-content: space-between;

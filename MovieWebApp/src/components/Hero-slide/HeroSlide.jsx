@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules'; // Đảm bảo cách import đúng cho phiên bản hiện tại
+import { Autoplay } from 'swiper/modules';
 import Button, { OutlineButton } from '../button/Button';
 import Modal, { ModalContent } from '../modal/Modal';
 
@@ -9,10 +9,10 @@ import tmdbApi, { category, movieType } from '../../api/tmdbApi';
 import apiConfig from '../../api/apiConfig';
 
 import './HeroSlide.css';
-import { useNavigate } from 'react-router-dom'; // Đảm bảo đúng import
+import { useNavigate } from 'react-router-dom';
 
-import 'swiper/css'; // Đảm bảo bạn đã import CSS của swiper
-import 'swiper/css/autoplay'; // Import CSS autoplay nếu cần
+import 'swiper/css'; 
+import 'swiper/css/autoplay'; 
 
 const HeroSlide = () => {
     const [movieItems, setMovieItems] = useState([]);
@@ -58,7 +58,7 @@ const HeroSlide = () => {
 };
 
 const HeroSlideItem = (props) => {
-    const navigate = useNavigate(); // Đảm bảo sử dụng useNavigate
+    const navigate = useNavigate(); 
 
     const item = props.item;
 
